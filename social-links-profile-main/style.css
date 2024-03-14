@@ -56,8 +56,12 @@ body{
    font-weight: 700;
    font-size: 15px;
    border-radius: 7px;
+   cursor: pointer;
 }
-
+.links button:hover{
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 20%);
+}
 .attribution{
     position: absolute;
     bottom: 0;
