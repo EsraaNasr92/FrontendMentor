@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Work Sans", sans-serif;
+    background: url('./assets/images/background-pattern-desktop.svg')  no-repeat;
+    background-size: cover;
+    background-color: hsl(275, 100%, 97%);
+}
+
+.container{
+    background-color: #fff;
+    color: #000;
+    max-width: 584px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.header{
+    font-size: 40px;
+    color: hsl(292, 42%, 14%);
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.faq{
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+    border-bottom: 1px solid #eee;
+}
+
+.faq:last-child{
+    border-bottom: none;
+}
+.faq-title{
+    color: hsl(292, 42%, 14%);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.faq-title:hover{
+    color: hsl(292, 16%, 49%);
+}
+
+.faq-text{
+    display: none;
+    color: hsl(292, 16%, 49%);
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+.faq.active .faq-text{
+    display: block;
+}
+
+.faq-toggle{
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    top: 13px;
+    right: 0px;
+}
+
+.faq-toggle .open{
+    display: none;
+}
+
+.faq.active .faq-toggle .open{
+    display: block;
+}
+
+.faq.active .faq-toggle .close{
+    display: none;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 0;
+}
+
+@media (max-width: 375px) {
+    body{
+        background: url('./assets/images/background-pattern-mobile.svg')  no-repeat;
+    }
+    .container {
+        width: 344px;
+        padding: 20px;
+    }
+    .header h2 {
+        margin: 0;
+    }
+    .faq-title{
+        font-size: 21px;
+    }
+    .faq-text{
+        font-size: 14px;
+    }
+    .attribution {
+        font-size: 14px;
+    }
+    .faq-toggle {
+        top: 28px;
+    }
+    .attribution{
+        display: none;
+    }
+}
