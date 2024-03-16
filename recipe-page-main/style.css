@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+:root{
+    --primary-font: "Young Serif", serif;
+    --secondray-font: "Outfit", sans-serif;
+    --primary-color:  hsl(14, 45%, 36%);
+    --dar-raspberry: hsl(332, 51%, 32%);
+    --wenge-brown: hsl(30, 10%, 34%);
+}
+strong{
+    color: var(--wenge-brown);
+}
+ul li, ol{
+    line-height: 35px;
+    color: hsl(30, 10%, 34%);
+    padding-left: 20px;
+}
+ol {
+    list-style-type: none;
+    counter-reset: my-counter;
+    padding-left: 20px;
+}
+ol li {
+    margin-left: 1.5em;
+    position: relative;
+    
+}
+ol li:before {
+    content: counter(my-counter) ".";
+    counter-increment: my-counter;
+    position: absolute;
+    left: -1.8em;
+    color: var(--dar-raspberry);
+    font-weight: bold;
+    
+}
+h3{
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    font-size: 30px;
+} 
+p, table{
+    color: hsl(30, 10%, 34%);
+}
+body{
+    background-color:  hsl(30, 54%, 90%);
+    font-family: var(--secondray-font);
+}
+.recipe{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.recipe img{
+    max-width: 100%;
+}
+.header h1{
+    font-size: 37px;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-style: normal;
+    color: hsl(24, 5%, 18%);
+}
+.header p{
+    font-family: var(--secondray-fontdd);
+    line-height: 25px;
+}
+.preperation-time{
+    background-color: hsl(330, 100%, 98%);
+    padding: 25px;
+    border-radius: 20px;
+}
+.preperation-time h2{
+    color:  var(--dar-raspberry);
+}
+table {
+    border-collapse: separate;
+    border-spacing: 10px; 
+}
+td {
+    padding: 0 180px 20px 0; 
+   
+}
+tr {
+    position: relative;
+}
+tr:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid #eee; /* Add border after each row */
+}
+.data{
+    color: var(--dar-raspberry);
+    font-weight: 600;
+}
